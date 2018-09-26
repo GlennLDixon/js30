@@ -23,7 +23,7 @@ fetch(endpoint)
   .then(blob => blob.json())
   .then(data => cities.push(...data))
 
-function findMatches(wordToWatch, Cities) {
+function findMatches(wordToWatch, cities) {
   return cities.filter(place => {
     // here we need to figure out if the city or state matches what ws searched
     const regex = new RegExp(wordToWatch, 'gi');
